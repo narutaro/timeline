@@ -59,7 +59,7 @@ puts bar
   airport_info.each do |code, (timezone, flag)|
 
     local_time = Time.now + 60 * 60 * i
-    rounded_local_time = Time.at((local_time.to_i / 1800.0).ceil * 1800)
+    rounded_local_time = Time.at((local_time.to_i / 3600).ceil * 3600)
     rounded_remote_time = rounded_local_time.with_timezone(timezone)
 
     time_text = rounded_remote_time.strftime('%m/%d %H:%M').ljust(column_width)
