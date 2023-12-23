@@ -65,7 +65,7 @@ puts bar
     time_text = rounded_remote_time.strftime('%m/%d %H:%M').ljust(column_width)
 
     # Gray out the non-working time
-    if rounded_remote_time.hour >= 9 && rounded_remote_time.hour < 17
+    if rounded_remote_time.hour > 8 && rounded_remote_time.hour < 18
       time_text
     else
       time_text = gray_text(time_text)
